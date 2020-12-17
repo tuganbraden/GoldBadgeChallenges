@@ -21,21 +21,7 @@ namespace _02_KomodoClaims_Repository
         public decimal ClaimAmount { get; set; }
         public DateTime DateOfIncident { get; set; }
         public DateTime DateOfClaim { get; set; }
-        public bool IsValid 
-        { 
-            get
-            {
-                DateOfIncident.AddDays(30);
-                if (DateTime.Compare(DateOfClaim, DateOfIncident) > 0 )
-                {
-                    return false;
-                }
-                else
-                {
-                    return true;
-                }
-            }
-        }
+        public bool IsValid { get; set; }
 
         public Claim() { }
 
@@ -47,6 +33,15 @@ namespace _02_KomodoClaims_Repository
             ClaimAmount = amount;
             DateOfIncident = incident;
             DateOfClaim = claim;
+            DateTime dueDate = incident.AddDays(30);
+            if (DateTime.Compare(claim, dueDate) > 0)
+            {
+                IsValid = false;
+            }
+            else
+            {
+                IsValid = true;
+            }
         }
     }
 }
