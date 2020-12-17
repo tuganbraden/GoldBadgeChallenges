@@ -10,6 +10,8 @@ namespace _02_KomodoClaims_Console
     {
         static void Main(string[] args)
         {
+            ProgramUI go = new ProgramUI();
+            go.run();
         }
     }
 }

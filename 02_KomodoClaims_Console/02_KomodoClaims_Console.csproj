@@ -7,7 +7,7 @@
     <ProjectGuid>{580163B9-DE7C-4428-B8F6-035893B1EFBF}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_02_KomodoClaims_Console</RootNamespace>
-    <AssemblyName>_02_KomodoClaims_Console</AssemblyName>
+    <AssemblyName>02_KomodoClaims_Console</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
+    <Compile Include="ProgramUI.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
