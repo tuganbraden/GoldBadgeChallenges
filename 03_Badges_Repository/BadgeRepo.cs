@@ -8,16 +8,16 @@ namespace _03_Badges_Repository
 {
     public class BadgeRepo
     {
-        Dictionary<int, Badge> _badgeDict = new Dictionary<int, Badge>();
+        Dictionary<int, List<String>> _badgeDict = new Dictionary<int, List<String>>();
         
         // CREATE
         public void AddBadge(Badge badge)
         {
-            _badgeDict.Add(badge.BadgeID, badge);
+            _badgeDict.Add(badge.BadgeID, badge.Doors);
         }
         
         // READ
-        public Dictionary<int, Badge> GetBadgeDict()
+        public Dictionary<int, List<String>> GetBadgeDict()
         {
             return _badgeDict;
         }
@@ -27,7 +27,7 @@ namespace _03_Badges_Repository
         {
             if (newInfo != null)
             {
-                _badgeDict[newInfo.BadgeID] = newInfo;
+                _badgeDict[newInfo.BadgeID] = newInfo.Doors;
                 return true;
             }
             else
@@ -50,5 +50,6 @@ namespace _03_Badges_Repository
             }
         }
 
+        
     }
 }
