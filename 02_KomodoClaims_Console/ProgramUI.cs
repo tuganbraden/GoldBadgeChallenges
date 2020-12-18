@@ -56,7 +56,7 @@ namespace _02_KomodoClaims_Console
             }
         }
 
-        public void SeeClaims()
+        private void SeeClaims()
         {
             Console.Clear();
             foreach(Claim item in _claimRepo.GetQueue())
@@ -81,7 +81,7 @@ namespace _02_KomodoClaims_Console
             Console.ReadKey();
         }
 
-        public void HandleNextClaim()
+        private void HandleNextClaim()
         {
             Console.Clear();
 
@@ -115,7 +115,7 @@ namespace _02_KomodoClaims_Console
             Console.ReadKey();
         }
 
-        public void NewClaim()
+        private void NewClaim()
         {
             Console.Clear();
 
@@ -178,7 +178,7 @@ namespace _02_KomodoClaims_Console
             Console.ReadKey();
         }
 
-        public void Seed()
+        private void Seed()
         {
             //public Claim(String id, ClaimType type, String desc, decimal amount, DateTime incident, DateTime claim)
             DateTime incident1 = new DateTime(2020, 3, 15);
